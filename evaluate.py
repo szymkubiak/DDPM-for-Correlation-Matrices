@@ -10,9 +10,6 @@ from scipy.cluster.hierarchy import cophenet
 from configs import configs
 from utility import select_empirical_dataset, load_dataset, extract, diffusion_process
 
-import os
-os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
-
 def adj_corr_matrix(corrmat):
     a, b = np.triu_indices(corrmat.shape[0], k=1)
     np.fill_diagonal(corrmat, 1)
